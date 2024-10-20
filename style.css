@@ -1,0 +1,256 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Merriweather Sans', sans-serif;
+    box-sizing: border-box;
+
+}
+:root {
+    --colorDark1: #112d4e;
+    --colorDark2: #3f72af;
+    --colorLight1: #dbe2ef;
+    --colorlight2: #f9f7f7;
+
+
+}
+.wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    color: var(--colorlight2);
+    padding-bottom:50px ;
+    background-image: linear-gradient(160deg,#112d4e 0%,#3f72af 100% );
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+
+}
+.tab-container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 550px;
+    margin-top: 3rem;
+    /* padding-top: 33px; */
+    margin-inline: auto;
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing:1.75px;
+    padding: 5px 8px;
+
+}
+
+.tab.current-tab{
+    background-color: rgba(219, 226, 239 ,0.5);
+    border-radius: 4px;
+}
+.weather-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 3rem;
+
+}
+
+.btn{
+    padding: 0.5rem 1.2rem;
+    text-transform: uppercase;
+    color: #f9f7f7;
+    background-color: #3f72af;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin: 0 80px;
+
+}
+.sub-container{
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.sub-container img{
+    /* margin-left: 100px; */
+}
+
+/* don't show  class diactive */
+
+.grant-location-container {
+    display: none ;
+}
+.active{
+    display: block;
+}
+
+.grant-location-container_p{
+     font-size: 30px;
+     text-transform: capitalize;
+     margin-top: 20px;
+}
+.grant-location-container_p2{
+    font-size: 15px;
+    font-weight: 100;
+    opacity: 0.7;
+}
+
+
+/* loading styling */
+.loading-container{
+    display: none;
+
+}
+.loading-container .active{
+    display: flex;   
+}
+.loading-container p{
+    text-transform: uppercase;
+
+}
+
+.user-info-container{
+    display: none;
+}
+.user-info-container.active{
+    display: flex;
+}
+
+
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0.0.5rem;
+
+}
+.user-info-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    
+}
+.user-info-container img{
+    width: 90px;
+    height: 90px;
+
+}
+
+.name p{
+    font-size: 2rem;
+
+}
+.name img{
+    width: 30px;
+    height: 30px;
+}
+
+.user-info-container p[data-temp]{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.parameter-container{
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    margin-top: 1.3rem;
+}
+.parameter{
+    width: 30%;
+    max-width: 200px;
+    border-radius: 5px;
+    background-color: rgba(219, 226, 239 ,0.5);
+    border-radius: 4px; 
+    padding: 0.3rem 2rem; 
+    text-align: center;  
+}
+.parameter img{
+    width: 80px;
+    height: 80px;
+}
+.parameter p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+.parameter p[data-p]{
+    font-size: 15px;
+}
+
+.form-container{
+    display: none;
+    /* display: flex; */
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 2.5rem;
+}
+.form-container.active {
+    display: flex
+}
+
+.form-container input{
+    width:90%;
+    height: 40px;
+    background-color: rgba(219, 226, 239 ,0.5);
+    border-radius: 5px;
+    border: none;
+    padding:6px 9px;
+    color: #f9f7f7;
+
+}
+.form-container input::placeholder{
+    color: #f9f7f7;
+}
+.form-container input:hover{
+    border:1.5px #f9f7f7 solid;
+}
+
+
+.form-container button{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .parameter-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.3rem;
+    }
+    .parameter{
+        width: 95%;
+        max-width: 200px;
+        border-radius: 5px;
+        background-color: rgba(219, 226, 239 ,0.5);
+        border-radius: 4px; 
+        padding: 0.3rem 2rem; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+    .parameter img{
+        width: 80px;
+        height: 80px;
+    }
+    .wrapper {
+       
+        padding: 30px 30px ;
+    }
+  }
+
